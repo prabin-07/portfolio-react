@@ -28,8 +28,8 @@ export default function Projects() {
         <span className="section-num">04</span><span className="section-title">Projects</span>
       </Reveal>
       <div className="proj-grid">
-        {PROJECTS.map(p => (
-          <Reveal className="proj-card" key={p.name}>
+        {PROJECTS.map((p, i) => (
+          <Reveal className="proj-card" key={p.name} delay={i * 80}>
             <div className="proj-top">
               <div className="proj-name">{p.name}</div>
               <a href={p.github} target="_blank" rel="noreferrer" className="proj-link">GITHUB →</a>

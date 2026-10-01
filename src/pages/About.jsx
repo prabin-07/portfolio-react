@@ -7,7 +7,7 @@ export default function About() {
         <span className="section-num">01</span><span className="section-title">About</span>
       </Reveal>
       <div className="about-grid">
-        <Reveal className="about-text">
+        <Reveal className="about-text" delay={80}>
           <p>BCA graduate specializing in full-stack web development, with hands-on MERN experience from
           an internship at <strong>ICT Academy, Technopark, Trivandrum</strong>.</p>
           <p>I've built two end-to-end applications from scratch — <strong>Petromine</strong>, a smart fuel
@@ -16,7 +16,7 @@ export default function About() {
           <p>Comfortable across the whole stack: MongoDB and Node on the backend, React on the front,
           and the REST APIs that connect them.</p>
         </Reveal>
-        <Reveal className="fact-list">
+        <Reveal className="fact-list" delay={160}>
           <div className="fact"><span className="fact-k">role</span><span className="fact-v">Full-Stack Developer (MERN)</span></div>
           <div className="fact"><span className="fact-k">education</span><span className="fact-v">BCA, MG University</span></div>
           <div className="fact"><span className="fact-k">internship</span><span className="fact-v">ICT Academy, Technopark</span></div>

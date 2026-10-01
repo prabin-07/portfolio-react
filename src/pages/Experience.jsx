@@ -6,7 +6,7 @@ export default function Experience() {
       <Reveal className="section-head" as="div">
         <span className="section-num">03</span><span className="section-title">Experience</span>
       </Reveal>
-      <Reveal className="exp-item" as="div">
+      <Reveal className="exp-item" as="div" delay={80}>
         <div className="exp-time">May 2025<br />1 Month</div>
         <div>
           <div className="exp-role">MERN Stack Intern</div>

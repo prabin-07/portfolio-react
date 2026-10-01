@@ -15,16 +15,16 @@ export default function Skills() {
       <Reveal className="section-head" as="div">
         <span className="section-num">02</span><span className="section-title">Skills</span>
       </Reveal>
-      <Reveal className="skill-grid" as="div">
-        {GROUPS.map(g => (
-          <div className="skill-cell" key={g.cat}>
+      <div className="skill-grid">
+        {GROUPS.map((g, i) => (
+          <Reveal className="skill-cell" key={g.cat} delay={i * 60}>
             <div className="skill-cat">{g.cat}</div>
             <div className="skill-tags">
               {g.tags.map(t => <span className="tag" key={t}>{t}</span>)}
             </div>
-          </div>
+          </Reveal>
         ))}
-      </Reveal>
+      </div>
     </section>
   )
 }

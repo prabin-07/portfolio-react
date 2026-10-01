@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-export default function Reveal({ children, className = '', as: Tag = 'div', ...rest }) {
+export default function Reveal({ children, className = '', as: Tag = 'div', delay = 0, ...rest }) {
   const ref = useRef(null)
   const [inView, setInView] = useState(false)
 
@@ -14,14 +14,19 @@ export default function Reveal({ children, className = '', as: Tag = 'div', ...r
           obs.unobserve(node)
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.12 }
     )
     obs.observe(node)
     return () => obs.disconnect()
   }, [])
 
   return (
-    <Tag ref={ref} className={`reveal${inView ? ' in' : ''} ${className}`} {...rest}>
+    <Tag
+      ref={ref}
+      className={`reveal${inView ? ' in' : ''} ${className}`}
+      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      {...rest}
+    >
       {children}
     </Tag>
   )
