@@ -998,3 +998,65 @@ footer { border-color: var(--line); color: #8290a0; font: 500 11px var(--sans); 
 @media (prefers-reduced-motion: reduce) {
   .grid-bg::before { animation: none; }
 }
+
+/* Small finishing details */
+.grid-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .26;
+  background-image: radial-gradient(rgba(111,122,156,.3) .65px,transparent .65px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom,black,transparent 78%);
+}
+.hero-card {
+  isolation: isolate;
+}
+.hero-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 220px;
+  height: 220px;
+  right: -95px;
+  top: 58px;
+  border-radius: 50%;
+  background: radial-gradient(circle,rgba(167,202,211,.25),rgba(185,183,222,.12) 48%,transparent 70%);
+  pointer-events: none;
+}
+.section-num {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255,255,255,.92);
+  border-radius: 50%;
+  background: rgba(255,255,255,.62);
+  box-shadow: var(--shadow-sm);
+  font-size: 10px;
+}
+.skill-cell,.proj-card,.exp-item,.fact-list { box-shadow: 0 10px 30px rgba(61,76,96,.055), inset 0 1px rgba(255,255,255,.9); }
+.skill-cell:hover,.proj-card:hover {
+  box-shadow: 0 18px 38px rgba(61,76,96,.1), inset 0 1px rgba(255,255,255,.95);
+}
+.skill-cell::after {
+  content: '';
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  right: -36px;
+  bottom: -40px;
+  border: 1px solid rgba(151,168,192,.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 9px rgba(151,168,192,.045),0 0 0 19px rgba(151,168,192,.03);
+  pointer-events: none;
+}
+.proj-card:first-child { background: linear-gradient(120deg,rgba(255,255,255,.78),rgba(231,239,242,.66)); }
+.proj-link,.clink,.btn { transition: transform .25s ease,box-shadow .25s ease,background .25s ease; }
+.proj-link:hover,.clink:hover,.btn:hover { transform: translateY(-2px); }
+.nav-links a.active { box-shadow: inset 0 0 0 1px rgba(255,255,255,.7); }
+@media (max-width: 640px) {
+  .grid-bg::after { background-size: 26px 26px; opacity: .18; }
+  .section-num { width: 30px; height: 30px; }
+}
