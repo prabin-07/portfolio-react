@@ -16,7 +16,6 @@ export default function Home() {
           <Link to="/contact" className="btn btn-line">Get In Touch <span aria-hidden="true">↗</span></Link>
         </div>
       </div>
-
       <aside className="hero-card" aria-label="Full-stack developer, MERN stack">
         <div className="hero-card-top"><span>01 / THE STACK</span><span className="hero-card-mark">✳</span></div>
         <div className="hero-card-title">One stack,<br /><em>many layers.</em></div>
@@ -27,8 +26,7 @@ export default function Home() {
         </div>
         <div className="hero-card-foot"><span>KOTTAYAM, KERALA</span><span>BCA · FINAL YEAR</span></div>
       </aside>
-
-      <div className="hero-meta"><span>PORTFOLIO / 2026</span><a href="#home-explore">SCROLL TO EXPLORE ↓</a></div>
+      <div className="hero-meta"><span>PORTFOLIO / 2026</span><span>KOTTAYAM, KERALA, IN</span></div>
     </section>
   )
 }

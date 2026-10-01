@@ -26,30 +26,19 @@ export default function Layout() {
         <div className="wrap nav-inner">
           <NavLink to="/" className="logo">prabin<span>.</span>dev</NavLink>
           <div className={`nav-links${open ? ' open' : ''}`}>
-            {LINKS.map(l => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end={l.end}
-                className={({ isActive }) => isActive ? 'active' : ''}
-              >
-                {l.label}
+            {LINKS.map(link => (
+              <NavLink key={link.to} to={link.to} end={link.end} className={({ isActive }) => isActive ? 'active' : ''}>
+                {link.label}
               </NavLink>
             ))}
           </div>
-          <button className="nav-toggle" onClick={() => setOpen(o => !o)} aria-label="Toggle menu">
+          <button className="nav-toggle" onClick={() => setOpen(value => !value)} aria-label="Toggle menu" aria-expanded={open}>
             {open ? '×' : '☰'}
           </button>
         </div>
       </nav>
-
-      <main className="page" key={location.pathname}>
-        <Outlet />
-      </main>
-
-      <footer>
-        © 2026 Prabin Pradeep — built with React + Vite, deployed on Vercel.
-      </footer>
+      <main className="page" key={location.pathname}><Outlet /></main>
+      <footer>© 2026 Prabin Pradeep · Built with React + Vite</footer>
     </>
   )
 }
