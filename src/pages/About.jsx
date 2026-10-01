@@ -9,12 +9,12 @@ export default function About() {
       <div className="about-grid">
         <Reveal className="about-text" delay={80}>
           <p>BCA graduate specializing in full-stack web development, with hands-on MERN experience from
-          an internship at <strong>ICT Academy, Technopark, Trivandrum</strong>.</p>
-          <p>I've built two end-to-end applications from scratch — <strong>Petromine</strong>, a smart fuel
-          price tracker, and a <strong>task management system</strong> with JWT authentication — and I'm
-          currently building <strong>Advocate AI</strong>, a legal-assistant platform with a Python backend.</p>
-          <p>Comfortable across the whole stack: MongoDB and Node on the backend, React on the front,
-          and the REST APIs that connect them.</p>
+an internship at <strong>ICT Academy, Technopark, Trivandrum</strong>.</p>
+<p>I've built three end-to-end applications: <strong>Petromine</strong>, a smart fuel price tracker
+<strong>Task Tracker</strong>, a task management system with JWT authentication and
+<strong> Advocate AI</strong>, a legal-assistant platform with a Python backend.</p>
+<p>Comfortable across the whole stack — MongoDB and Node on the backend, React on the front,
+and the REST APIs that connect them.</p>
         </Reveal>
         <Reveal className="fact-list" delay={160}>
           <div className="fact"><span className="fact-k">role</span><span className="fact-v">Full-Stack Developer (MERN)</span></div>

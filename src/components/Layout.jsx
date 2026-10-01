@@ -21,8 +21,8 @@ export default function Layout() {
 
   return (
     <>
-      <div className="grid-bg" />
-      <nav>
+      <div className="grid-bg" aria-hidden="true" />
+      <nav aria-label="Main navigation">
         <div className="wrap nav-inner">
           <NavLink to="/" className="logo">prabin<span>.</span>dev</NavLink>
           <div className={`nav-links${open ? ' open' : ''}`}>
@@ -38,7 +38,7 @@ export default function Layout() {
         </div>
       </nav>
       <main className="page" key={location.pathname}><Outlet /></main>
-      <footer>© 2026 Prabin Pradeep · Built with React + Vite</footer>
+      <footer>© 2026 Prabin Pradeep <span aria-hidden="true">·</span> Full-Stack Developer <span aria-hidden="true">·</span> Kerala, India</footer>
     </>
   )
 }
