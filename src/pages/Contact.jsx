@@ -9,7 +9,6 @@ export default function Contact() {
         <a href="mailto:prabinpradeepin@gmail.com" target='_blank' className="clink">EMAIL</a>
         <a href="https://github.com/prabin-07" target="_blank" rel="noreferrer" className="clink">GITHUB</a>
         <a href="https://www.linkedin.com/in/prabin-pradeep-005172391/" target="_blank" rel="noreferrer" className="clink">LINKEDIN</a>
-        <a href="tel:+919961583169" className="clink">CALL</a>
       </Reveal>
     </section>
   )

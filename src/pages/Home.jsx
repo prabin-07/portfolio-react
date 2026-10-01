@@ -1,45 +1,34 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
-  const [typed, setTyped] = useState('')
-  const [done, setDone] = useState(false)
-  const target = 'whoami'
-
-  useEffect(() => {
-    let i = 0
-    let timeout
-    const start = setTimeout(function type() {
-      if (i <= target.length) {
-        setTyped(target.slice(0, i))
-        i++
-        timeout = setTimeout(type, 90)
-      } else {
-        setDone(true)
-      }
-    }, 300)
-    return () => { clearTimeout(start); clearTimeout(timeout) }
-  }, [])
-
   return (
     <section className="hero wrap">
-      <div className="eyebrow"><span className="dot" /> AVAILABLE FOR FULL-TIME ROLES</div>
-      <div className="terminal">
-        <span className="prompt">$</span> <span id="typed" className={done ? 'done' : ''}>{typed}</span>
+      <div className="hero-copy">
+        <div className="eyebrow"><span className="dot" /> AVAILABLE FOR FULL-TIME ROLES</div>
+        <p className="hero-kicker">FULL-STACK DEVELOPER <span>·</span> MERN</p>
+        <h1 className="hero-title">Prabin<br /><em>Pradeep</em><span className="hero-period">.</span></h1>
+        <p className="hero-sub">
+          I build things end-to-end: APIs, databases, and the interfaces on top of them.
+          Working across the <strong>MERN stack</strong> — MongoDB, Express, React, and Node.
+        </p>
+        <div className="hero-cta">
+          <Link to="/projects" className="btn btn-fill">View Projects <span aria-hidden="true">↗</span></Link>
+          <Link to="/contact" className="btn btn-line">Get In Touch <span aria-hidden="true">↗</span></Link>
+        </div>
       </div>
-      <p className="hero-sub">
-        I'm <strong>Prabin Pradeep</strong>, a full-stack developer working in the
-        <strong> MERN stack</strong> — MongoDB, Express, React, Node. I build things
-        end-to-end: APIs, databases, and the interfaces on top of them.
-      </p>
-      <div className="hero-cta">
-        <Link to="/projects" className="btn btn-fill">View Projects</Link>
-        <Link to="/contact" className="btn btn-line">Get In Touch</Link>
-      </div>
-      <div className="hero-meta">
-        <span>Kottayam, Kerala, IN</span>
-        <span>BCA — Final Year</span>
-      </div>
+
+      <aside className="hero-card" aria-label="Full-stack developer, MERN stack">
+        <div className="hero-card-top"><span>01 / THE STACK</span><span className="hero-card-mark">✳</span></div>
+        <div className="hero-card-title">One stack,<br /><em>many layers.</em></div>
+        <div className="stack-list">
+          <div><span>01</span><strong>MongoDB</strong><small>DATA</small></div>
+          <div><span>02</span><strong>Express + Node</strong><small>BACKEND</small></div>
+          <div><span>03</span><strong>React</strong><small>INTERFACE</small></div>
+        </div>
+        <div className="hero-card-foot"><span>KOTTAYAM, KERALA</span><span>BCA · FINAL YEAR</span></div>
+      </aside>
+
+      <div className="hero-meta"><span>PORTFOLIO / 2026</span><a href="#home-explore">SCROLL TO EXPLORE ↓</a></div>
     </section>
   )
 }
